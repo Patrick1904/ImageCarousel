@@ -1,0 +1,168 @@
+html, body {
+  background: white;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.slider {
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 900px;
+}
+
+.slide_viewer {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.slide:nth-of-type(1) {
+  background: url("la.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.slide:nth-of-type(2) {
+  background: url("chicago.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.slide:nth-of-type(3) {
+  background: url("ny.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.slide_buttons {
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  margin-top: -70px;
+  z-index: 1;
+}
+
+a.slide_btn {
+  color: white !important;
+  opacity: 0.3;
+  font-size: 50px;
+  margin: 0.12em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.slide_btn.active, .slide_btn:hover {
+  opacity: 1.0;
+  cursor: pointer;
+}
+
+.directional_nav {
+  height: 500px;
+  margin: 0 auto;
+  max-width: 900px;
+  position: relative;
+  top: -500px;
+}
+
+.previous_btn {
+  bottom: 0;
+  left: 40px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+.next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 40px;
+  top: 0;
+}
+
+.previous_btn, .next_btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  opacity: 0.3;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.previous_btn:hover, .next_btn:hover {
+  opacity: 1.0;
+}
+
+@media screen and (max-width: 699px) and (min-width: 320px) {
+  .previous_btn {
+    left: 20px;
+  }
+  .next_btn {
+    right: 20px;
+  }
+  .slide_buttons {
+    margin-top: -180px;
+  }
+  .previous_btn, .next_btn, svg {
+    height: 40px;
+    width: 40px;
+  } 
+  a.slide_btn {
+    font-size: 30px;
+  }
+  .slider {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 700px) {
+  .previous_btn {
+    left: 30px;
+  }
+  .next_btn {
+    right: 30px;
+  }
+  .slide_buttons {
+    margin-top: -80px;
+  }
+  .previous_btn, .next_btn, svg {
+    height: 50px;
+    width: 50px;
+  } 
+  a.slide_btn {
+    font-size: 40px;
+  }
+  .slider {
+    max-width: none;
+  }
+  
+}
